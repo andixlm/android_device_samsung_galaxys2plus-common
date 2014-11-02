@@ -171,10 +171,6 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="decoder-ignores-streamcorrupt-error" />
         </MediaCodec>
 
-        <!-- Audio Hardware -->
-        <MediaCodec name="OMX.brcm.audio.mp3.decoder" type="audio/mpeg" />
-        <MediaCodec name="OMX.brcm.audio.amrnb.decoder" type="audio/3gpp" />
-        <MediaCodec name="OMX.brcm.audio.amrwb.decoder" type="audio/amr-wb" />
         <MediaCodec name="OMX.google.mp3.decoder" type="audio/mpeg" />
         <MediaCodec name="OMX.google.amrnb.decoder" type="audio/3gpp" />
         <MediaCodec name="OMX.google.amrwb.decoder" type="audio/amr-wb" />
@@ -244,15 +240,6 @@ Only the three quirks included above are recognized at this point:
 
         <!-- Audio Software -->
         <MediaCodec name="OMX.SEC.aac.enc" type="audio/mp4a-latm" />
-
-        <MediaCodec name="OMX.brcm.audio.amrnb.encoder" type="audio/3gpp">
-            <Quirk name="supports-multiple-frames-per-input-buffer" />
-        </MediaCodec>
-
-        <MediaCodec name="OMX.brcm.audio.amrwb.encoder" type="audio/amr-wb">
-            <Quirk name="supports-multiple-frames-per-input-buffer" />
-        </MediaCodec>
-
         <MediaCodec name="OMX.google.aac.encoder" type="audio/mp4a-latm" />
         <MediaCodec name="OMX.google.amrnb.encoder" type="audio/3gpp" />
         <MediaCodec name="OMX.google.amrwb.encoder" type="audio/amr-wb" />
