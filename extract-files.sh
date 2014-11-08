@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=samsung
-DEVICE=bc28155-common
+DEVICE=bcm281x5-common
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
