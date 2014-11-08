@@ -86,6 +86,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
