@@ -10,7 +10,6 @@ bin/geomagneticd
 bin/glgps
 bin/gps.cer
 bin/gpslogd
-bin/immvibed
 bin/macloader
 bin/mttlogger
 bin/npsmobex
@@ -64,7 +63,6 @@ lib/libhdcp.so
 lib/libhdcp2.so
 lib/libHDCPKeyManager.so
 lib/libhdmiaudio.so
-lib/libImmVibeJ.so
 lib/libmmal.so
 lib/libmmal_components.so
 lib/libmmal_util.so
