@@ -75,7 +75,7 @@ BOARD_CHARGER_RES := device/samsung/bcm281x5-common/res/charger
 BOARD_RIL_CLASS := ../../../device/samsung/bcm281x5-common/ril/
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := device/samsung/bcm281x5-common/cmhw/
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/bcm281x5-common/cmhw/
 
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/bcm281x5-common/include
