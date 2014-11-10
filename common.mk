@@ -44,10 +44,6 @@ PRODUCT_PACKAGES += \
 	charger \
 	charger_res_images
 
-# Device Settings
-PRODUCT_PACKAGES += \
-	BCMSettings
-
 # Misc other modules
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
