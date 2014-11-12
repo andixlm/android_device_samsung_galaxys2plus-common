@@ -29,7 +29,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/bcm281x5-common/bluetooth/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/galaxys2plus-common/bluetooth/libbt_vndcfg.txt
 
 # Wi-Fi
 BOARD_WPA_SUPPLICANT_DRIVER 		:= NL80211
@@ -56,7 +56,7 @@ BOARD_USES_SKTEXTBOX := true
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/bcm281x5-common/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/galaxys2plus-common/configs/egl.cfg
 BOARD_USE_MHEAP_SCREENSHOT := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -69,16 +69,16 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-BOARD_CHARGER_RES := device/samsung/bcm281x5-common/res/charger
+BOARD_CHARGER_RES := device/samsung/galaxys2plus-common/res/charger
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/samsung/bcm281x5-common/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/bcm281x5-common/cmhw/
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/galaxys2plus-common/cmhw/
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/bcm281x5-common/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2plus-common/include
 
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
@@ -90,7 +90,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_stora
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/bcm281x5-common/sepolicy
+    device/samsung/galaxys2plus-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts
