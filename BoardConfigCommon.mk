@@ -86,6 +86,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys2plus-common/recovery/recovery_keys.c
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # SELinux
