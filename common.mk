@@ -23,8 +23,16 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/keylayouts/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
 	$(COMMON_PATH)/keylayouts/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
 
+# Configs
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
+	$(COMMON_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
+	$(COMMON_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
+	$(COMMON_PATH)/configs/gps.cer:system/etc/gps.cer \
+	$(COMMON_PATH)/configs/gps.conf:system/etc/gps.conf \
+	$(COMMON_PATH)/configs/gps.xml:system/etc/gps.xml \
+	$(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+	$(COMMON_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+	$(COMMON_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
