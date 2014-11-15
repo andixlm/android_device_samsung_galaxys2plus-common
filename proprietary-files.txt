@@ -21,6 +21,7 @@ bin/vcos-version
 
 # ETC
 etc/asound.conf
+etc/camera_info.ini
 etc/default_gain.conf
 etc/DiamondVoice_Filter_NB.txt
 etc/DiamondVoice_Filter_WB.txt
