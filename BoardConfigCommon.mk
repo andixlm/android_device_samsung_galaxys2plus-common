@@ -27,7 +27,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736
+
+# This is actually 1610612736, but reducing to 1049 MB to support users using repartition.
+# See: http://forum.xda-developers.com/showpost.php?p=55293011&postcount=1
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1099956224
 
 # Actual size is 4404019200.
 # Reduced by 16384 to fix device encryption.
