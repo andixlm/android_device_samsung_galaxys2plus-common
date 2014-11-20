@@ -88,6 +88,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2plus-common/include
 # Compat
 TARGET_USES_LOGD := false
 
+# jemalloc causes a lot of random crash on free()
+MALLOC_IMPL := dlmalloc
+
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
 
