@@ -61,12 +61,13 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant \
 	wpa_supplicant.conf
 
-# Misc other modules
+# Audio modules
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
-	audio.r_submix.default \
-	audio_policy.capri
+	audio.r_submix.default
+
+USE_CUSTOM_AUDIO_POLICY := 1
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
