@@ -8,8 +8,7 @@ COMMON_PATH := device/samsung/galaxys2plus-common
 # Init files
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/ramdisk/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-	$(COMMON_PATH)/ramdisk/init.log.rc:root/init.log.rc \
-	$(COMMON_PATH)/ramdisk/lpm.rc:root/lpm.rc
+	$(COMMON_PATH)/ramdisk/init.log.rc:root/init.log.rc
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
@@ -53,7 +52,6 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-	charger \
 	charger_res_images
 
 # Misc other modules
