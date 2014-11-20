@@ -54,6 +54,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	charger_res_images
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+	dhcpcd.conf \
+	hostapd \
+	wpa_supplicant \
+	wpa_supplicant.conf
+
 # Misc other modules
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
