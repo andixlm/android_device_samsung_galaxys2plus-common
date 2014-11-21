@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <glgps xmlns="http://www.glpals.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.glpals.com/ glconfig.xsd" >
 	<!--HAL Confguration  -->
-  
+
 	<hal
 		acPortName="/dev/ttyS3"
 		lBaudRate="921600"
-		gpioNStdbyPath="/sys/class/gpio/gpio99/value"				
+		gpioNStdbyPath="/sys/class/gpio/gpio99/value"
 		acNvStoDir="/data/"
 		gpslogdPipePath="/data/system/.gpslogd.pipe"
 
-		cLogEnabled="false" 
+		cLogEnabled="false"
 		acLogDirectory="/sdcard/gps/broadcom/"
 		Log="JAVA"
 
@@ -20,7 +20,7 @@
 		arp-supl-use-apn="false"
 		acSuplServer="supl.google.com"
 		SuplPort="7276"
-		tlsCertPath="/system/bin/gps.cer"		
+		tlsCertPath="/system/bin/gps.cer"
 		SuplUT1Seconds="20"
 		SuplUT2Seconds="20"
 		SuplUT3Seconds="20"
@@ -38,13 +38,13 @@
 		LbsTAC="10101111"
 		ctrlPipe="/data/glgpsctrl"
 		LbsWlanEnable="false"
-		
+
 		SensorsEnable="false"
 		SensorsPowerSave="false"
 		SensorsLog="false"
 		AssertEnabled="false"
 		WakeLock="true"
-		GpsdRildClientWakeLock="true"		
+		GpsdRildClientWakeLock="true"
 	/>
 
 	<gll

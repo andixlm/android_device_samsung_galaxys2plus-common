@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
 	$(COMMON_PATH)/configs/gps.cer:system/bin/gps.cer \
 	$(COMMON_PATH)/configs/gps.conf:system/etc/gps.conf \
-	$(COMMON_PATH)/configs/gps.xml:system/etc/gps.xml \
+	$(COMMON_PATH)/configs/glconfig.xml:system/etc/gps/glconfig.xml \
 	$(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
 	$(COMMON_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
 	$(COMMON_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
