@@ -105,4 +105,18 @@ BOARD_SEPOLICY_DIRS += \
     device/samsung/galaxys2plus-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    file_contexts
+    file_contexts \
+    property_contexts \
+    service_contexts \
+    bkmgrd.te \
+    device.te \
+    geomagneticd.te \
+    gpsd.te \
+    init.te \
+    kernel.te \
+    macloader.te \
+    rild.te \
+    shell.te \
+    system_server.te \
+    tvserver.te \
+    vclmk.te
