@@ -18,15 +18,15 @@ BOARD_KERNEL_BASE := 0xa2000000
 BOARD_KERNEL_PAGESIZE := 4096
 
 # Filesystem
+TARGET_USERIMAGES_USE_EXT4 := true
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4404019200
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 1073741824
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-TARGET_USERIMAGES_USE_EXT4 := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -37,24 +37,22 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/galaxys2plus-common/bluetooth/libbt_vndcfg.txt
 
 # Wi-Fi
-BOARD_WPA_SUPPLICANT_DRIVER 		:= NL80211
-WPA_SUPPLICANT_VERSION      		:= VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_bcmdhd
-BOARD_HOSTAPD_DRIVER        		:= NL80211
-BOARD_HOSTAPD_PRIVATE_LIB   		:= lib_driver_cmd_bcmdhd
-BOARD_WLAN_DEVICE           		:= bcmdhd
-BOARD_WLAN_DEVICE_REV       		:= bcm4330_b1
-WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/dhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA     		:= "/system/etc/wifi/bcmdhd_sta.bin"
-WIFI_DRIVER_FW_PATH_AP      		:= "/system/etc/wifi/bcmdhd_apsta.bin"
-WIFI_DRIVER_MODULE_PATH     		:= "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_MODULE_NAME     		:= "dhd"
-WIFI_DRIVER_MODULE_ARG      		:= "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
-WIFI_DRIVER_MODULE_AP_ARG   		:= "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
-WIFI_BAND                   		:= 802_11_ABG
-
-# Wi-Fi Tethering
-BOARD_HAVE_SAMSUNG_WIFI := true
+BOARD_HAVE_SAMSUNG_WIFI             := true
+BOARD_WPA_SUPPLICANT_DRIVER         := NL80211
+WPA_SUPPLICANT_VERSION              := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB    := lib_driver_cmd_bcmdhd
+BOARD_HOSTAPD_DRIVER                := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB           := lib_driver_cmd_bcmdhd
+BOARD_WLAN_DEVICE                   := bcmdhd
+BOARD_WLAN_DEVICE_REV               := bcm4330_b1
+WIFI_DRIVER_FW_PATH_PARAM           := "/sys/module/dhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA             := "/system/etc/wifi/bcmdhd_sta.bin"
+WIFI_DRIVER_FW_PATH_AP              := "/system/etc/wifi/bcmdhd_apsta.bin"
+WIFI_DRIVER_MODULE_PATH             := "/system/lib/modules/dhd.ko"
+WIFI_DRIVER_MODULE_NAME             := "dhd"
+WIFI_DRIVER_MODULE_ARG              := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_DRIVER_MODULE_AP_ARG           := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_BAND                           := 802_11_ABG
 
 # SkTextBox for libtvout
 BOARD_USES_SKTEXTBOX := true
