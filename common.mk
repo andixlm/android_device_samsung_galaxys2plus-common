@@ -39,7 +39,9 @@ PRODUCT_COPY_FILES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	setup_fs
+	make_ext4fs \
+	setup_fs \
+	e2fsck
 
 # USB accessory
 PRODUCT_PACKAGES += \
