@@ -13,6 +13,9 @@ DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+TARGET_SCREEN_WIDTH := 480
+TARGET_SCREEN_HEIGHT := 800
+
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/keylayouts/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
