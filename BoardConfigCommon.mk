@@ -1,5 +1,6 @@
 USE_CAMERA_STUB := true
 
+# CPU
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -7,20 +8,35 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a9
 TARGET_CPU_SMP := true
 
+# Board
 TARGET_BOARD_PLATFORM := capri
-TARGET_BOOTLOADER_BOARD_NAME := capri
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := capri
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
 BOARD_KERNEL_BASE := 0xa2000000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
 
-# Filesystem
+# Recovery
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys2plus-common/recovery/recovery_keys.c
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
+
+# Hardware rendering
+USE_OPENGL_RENDERER := true
+BOARD_EGL_CFG := device/samsung/galaxys2plus-common/configs/egl.cfg
+BOARD_USE_MHEAP_SCREENSHOT := true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DCAPRI_HWC
+
+# File systems
 TARGET_USERIMAGES_USE_EXT4 := true
-
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736
@@ -29,8 +45,11 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 1073741824
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# Include an expanded selection of fonts
-EXTENDED_FONT_FOOTPRINT := true
+# Hardware tunables
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/galaxys2plus-common/cmhw/
+
+# RIL
+BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -55,49 +74,32 @@ WIFI_DRIVER_MODULE_ARG              := "firmware_path=/system/etc/wifi/bcmdhd_st
 WIFI_DRIVER_MODULE_AP_ARG           := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 WIFI_BAND                           := 802_11_ABG
 
-# SkTextBox for libtvout
-BOARD_USES_SKTEXTBOX := true
+# GPS
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2plus-common/include
 
-# Hardware rendering
-USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/galaxys2plus-common/configs/egl.cfg
-BOARD_USE_MHEAP_SCREENSHOT := true
-BOARD_EGL_WORKAROUND_BUG_10194508 := true
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
-COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DCAPRI_HWC
+# healthd
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
+
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+# BOARD_CHARGER_RES := device/samsung/galaxys2plus-common/res/charger
 
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-BOARD_CHARGER_RES := device/samsung/galaxys2plus-common/res/charger
-
-# RIL
-BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
-
-# Hardware tunables
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/galaxys2plus-common/cmhw/
-
-# GPS
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2plus-common/include
-
 # Compat
 TARGET_USES_LOGD := false
 
+# SkTextBox for libtvout
+BOARD_USES_SKTEXTBOX := true
+
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 # jemalloc causes a lot of random crash on free()
 MALLOC_IMPL := dlmalloc
-
-# healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
-
-# Recovery
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys2plus-common/recovery/recovery_keys.c
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
