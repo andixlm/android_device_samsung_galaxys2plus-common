@@ -88,6 +88,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.brcm.ap_crash=none \
 	persist.brcm.cp_crash=none
 
+# HDCP on
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.brcm.gralloc.force_hdcp=1
+
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
