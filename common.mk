@@ -4,12 +4,17 @@ COMMON_PATH := device/samsung/galaxys2plus-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
-# Screen sizes
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
+# Screen
 TARGET_SCREEN_WIDTH := 480
 TARGET_SCREEN_HEIGHT := 800
 
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+# Ramdisk
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/ramdisk/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
+	$(COMMON_PATH)/ramdisk/init.log.rc:root/init.log.rc
 
 # File system management tools
 PRODUCT_PACKAGES += \
@@ -17,17 +22,15 @@ PRODUCT_PACKAGES += \
 	make_ext4fs \
 	e2fsck
 
-# Ramdisk
-PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/ramdisk/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-	$(COMMON_PATH)/ramdisk/init.log.rc:root/init.log.rc
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
 	dhcpcd.conf \
 	hostapd \
 	wpa_supplicant \
 	wpa_supplicant.conf
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	wifi.interface=wlan0
 
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
@@ -98,25 +101,24 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-	wifi.interface=wlan0 \
 	mobiledata.interfaces=rmnet0 \
-	ro.telephony.call_ring.multiple=0 \
-	ro.telephony.call_ring=0 \
 	ro.telephony.ril_class=SamsungBCMRIL \
+	ro.ril.hsxpa=1 \
 	ro.ril.gprsclass=10 \
-	ro.ril.hsxpa=1
-
-# TV out
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.tvout.enable=true
+	ro.telephony.call_ring=0 \
+	ro.telephony.call_ring.multiple=0
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072 \
 	ro.zygote.disable_gl_preload=1 \
-	brcm.graphics.async_errors=true \
 	brcm.hwc.no-hdmi-trans=1 \
+	brcm.graphics.async_errors=true \
 	debug.hwui.render_dirty_regions=false
+
+# TV out
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.tvout.enable=true
 
 # FM Radio SNR
 PRODUCT_PROPERTY_OVERRIDES += \
