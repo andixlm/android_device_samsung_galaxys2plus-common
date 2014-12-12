@@ -4,8 +4,7 @@ COMMON_PATH := device/samsung/galaxys2plus-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_LOCALES := hdpi
 
 # Screen
 TARGET_SCREEN_WIDTH := 480
