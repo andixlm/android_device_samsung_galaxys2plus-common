@@ -30,6 +30,8 @@
 
 /sys/devices/platform/ld9040/lcd/panel/power_reduce -- u:object_r:sysfs_writable:s0
 
+/sys/devices/virtual/timed_output/vibrator/pwm_value -- u:object_r:sysfs_writable:s0
+
 # /system files
 /system/bin/geomagneticd                            u:object_r:geomagneticd_exec:s0
 /system/bin/macloader                               u:object_r:macloader_exec:s0
