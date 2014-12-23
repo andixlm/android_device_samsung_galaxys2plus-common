@@ -252,6 +252,9 @@
     <!-- Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
+    <!-- Support Miracast -->
+    <bool name="config_enableWifiDisplay">true</bool>
+
     <!-- Timeout in MS for how long you have to long-press the back key to
         kill the foreground app. -->
     <integer name="config_backKillTimeout">1500</integer>
