@@ -78,12 +78,6 @@ PRODUCT_PACKAGES += \
 	charger_res_images \
 	com.android.future.usb.accessory
 
-# Support for Browser's saved page feature. This allows
-# for pages saved on previous versions of the OS to be
-# viewed on the current OS.
-PRODUCT_PACKAGES += \
-	libskia_legacy
-
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.brcm.log=none \
