@@ -112,7 +112,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072 \
 	ro.zygote.disable_gl_preload=1 \
 	brcm.hwc.no-hdmi-trans=1 \
-	brcm.graphics.async_errors=true \
 	debug.hwui.render_dirty_regions=false
 
 # TV out
