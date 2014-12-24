@@ -18,8 +18,7 @@ PRODUCT_COPY_FILES += \
 # File system management tools
 PRODUCT_PACKAGES += \
 	setup_fs \
-	make_ext4fs \
-	e2fsck
+	make_ext4fs
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
