@@ -77,6 +77,7 @@ PRODUCT_PACKAGES += \
 	charger_res_images \
 	com.android.future.usb.accessory
 
+# Properties
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.brcm.log=none \
@@ -102,10 +103,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.opengles.version=131072 \
-	ro.zygote.disable_gl_preload=1 \
 	brcm.hwc.no-hdmi-trans=1 \
-	debug.hwui.render_dirty_regions=false
+	debug.hwui.render_dirty_regions=false \
+	ro.opengles.version=131072 \
+	ro.zygote.disable_gl_preload=1
 
 # TV out
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -137,17 +138,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-# We have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# Extended JNI checks
-# The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs 
-# before they have a chance to cause problems.
-# Default=true for development builds, set by android buildsystem.
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.kernel.android.checkjni=0 \
-	dalvik.vm.checkjni=false
-
 # Override phone-hdpi-512-dalvik-heap to match value on stock
 # - helps pass CTS com.squareup.okhttp.internal.spdy.Spdy3Test#tooLargeDataFrame)
 # (property override must come before included property)
@@ -155,5 +145,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.heapgrowthlimit=56m
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
+# Extended JNI checks
+# The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs 
+# before they have a chance to cause problems.
+# Default=true for development builds, set by android buildsystem.
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.checkjni=false \
+	ro.kernel.android.checkjni=0
+
+# We have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product-if-exists, vendor/samsung/galaxys2plus-common/galaxys2plus-common-vendor.mk)
