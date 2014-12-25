@@ -11,6 +11,8 @@
 
 /dev/bcm_irpc                                       u:object_r:radio_device:s0
 /dev/bcm_security                                   u:object_r:radio_device:s0
+/dev/flightmode-opt                                 u:object_r:radio_device:s0
+
 /dev/mpu6k                                          u:object_r:sensors_device:s0
 /dev/proximity                                      u:object_r:sensors_device:s0
 
