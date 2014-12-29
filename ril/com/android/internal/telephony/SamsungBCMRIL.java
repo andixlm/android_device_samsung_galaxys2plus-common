@@ -31,7 +31,7 @@ import android.telephony.PhoneNumberUtils;
 import java.util.ArrayList;
 
 /**
- * Custom RIL to handle unique behavior of D2 radio
+ * Custom RIL to handle unique behavior of BCM radio
  *
  * {@hide}
  */
@@ -291,7 +291,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
         // Here and below fake RIL_UNSOL_RESPONSE_SIM_STATUS_CHANGED, see b/7255789.
         // This is needed otherwise we don't automatically transition to the main lock
         // screen when the pin or puk is entered incorrectly.
-        // Note for the I9082: we're faking more than the standard RIL
+        // Note for the I9105/P: we're faking more than the standard RIL
         switch (rr.mRequest) {
             case RIL_REQUEST_ENTER_SIM_PUK:
             case RIL_REQUEST_ENTER_SIM_PUK2:
