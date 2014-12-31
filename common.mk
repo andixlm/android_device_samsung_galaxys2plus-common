@@ -146,6 +146,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
+# We have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
+
 # Extended JNI checks
 # The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs 
 # before they have a chance to cause problems.
@@ -153,8 +156,5 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.checkjni=false \
 	ro.kernel.android.checkjni=0
-
-# We have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product-if-exists, vendor/samsung/galaxys2plus-common/galaxys2plus-common-vendor.mk)
