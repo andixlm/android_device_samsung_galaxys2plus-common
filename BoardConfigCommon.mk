@@ -60,7 +60,6 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/galaxys2plus-common/bluetooth/libb
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/galaxys2plus-common/bluetooth
 
 # Wi-Fi
-BOARD_NO_WIFI_HAL                   := true
 BOARD_HAVE_SAMSUNG_WIFI             := true
 BOARD_WPA_SUPPLICANT_DRIVER         := NL80211
 WPA_SUPPLICANT_VERSION              := VER_0_8_X
