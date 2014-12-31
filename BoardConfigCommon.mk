@@ -91,7 +91,7 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # jemalloc causes a lot of random crash on free()
 MALLOC_IMPL := dlmalloc
 
-# Compat
+# Logging
 TARGET_USES_LOGD := false
 
 # SkTextBox for libtvout
