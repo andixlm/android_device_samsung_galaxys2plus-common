@@ -6,7 +6,6 @@ DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 PRODUCT_LOCALES := hdpi
 
-# Screen
 TARGET_SCREEN_WIDTH := 480
 TARGET_SCREEN_HEIGHT := 800
 
@@ -22,8 +21,8 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-	dhcpcd.conf \
 	hostapd \
+	dhcpcd.conf \
 	wpa_supplicant \
 	wpa_supplicant.conf
 
@@ -111,11 +110,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # TV out
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.tvout.enable=true
-
-# FM Radio SNR
-PRODUCT_PROPERTY_OVERRIDES += \
-	service.brcm.fm.start_snr=41 \
-	service.brcm.fm.stop_snr=20
 
 # Permissions
 PRODUCT_COPY_FILES += \
