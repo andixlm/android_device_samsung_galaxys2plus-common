@@ -1,6 +1,5 @@
-
 on boot
-	# setup permissions for logging
+	# Setup permissions for logging
     chown system system /sys/class/bcm_log/bcm_log/log
     chown system system /sys/class/bcm_log/bcm_log/log_lock
     chown system system /sys/class/bcm_log/bcm_log/cp_crash
@@ -19,7 +18,7 @@ on boot
     chmod 0664 /sys/class/bcm_log/bcm_log/file_max
     chmod 0664 /sys/class/bcm_log/bcm_log/file_base
 
-# setup permissions for lps
+	# Setup permissions for lps
     chown system system /sys/kernel/sysrpc/mtest/lps
     chmod 0664 /sys/kernel/sysrpc/mtest/lps
 
@@ -93,7 +92,7 @@ on property:persist.brcm.ap_crash=panic
 	write /sys/class/bcm_log/bcm_log/ap_crash panic
 	write /sys/class/bcm_log/bcm_log/ap_crash_lock 1
 
-#Setup Broadcom brcm.ase.xxx handling for ASE
+# Setup Broadcom brcm.ase.xxx handling for ASE
 on property:brcm.ase.log=*
     write /sys/class/bcm_log/bcm_log/log ${brcm.ase.log}
 
