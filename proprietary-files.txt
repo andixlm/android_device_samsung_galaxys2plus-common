@@ -1,4 +1,3 @@
-# Binaries
 bin/atrace
 bin/BCM4330B1_002.001.003.0876.0996.hcd
 bin/bkmgrd
@@ -15,8 +14,6 @@ bin/tvserver
 bin/vcdbg
 bin/vclmk
 bin/vcos-version
-
-# ETC
 etc/asound.conf
 etc/camera_info.ini
 etc/default_gain.conf
@@ -28,21 +25,15 @@ etc/sensors.conf
 etc/srm.bin
 etc/tinyucm.conf
 etc/Volume.db
-
-# Wi-Fi
 etc/wifi/bcmdhd_apsta.bin
 etc/wifi/bcmdhd_sta.bin
 etc/wifi/nvram_net.txt
-
-# HW Libs
 lib/hw/alsa.default.so
 lib/hw/audio.hdmi.capri.so
 lib/hw/audio.primary.capri.so
 lib/hw/audio.usb.capri.so
 lib/hw/gps.capri.so
 lib/hw/sensors.capri.so
-
-# Libs
 lib/libasound.so
 lib/lib_Samsung_Resampler.so
 lib/lib_Samsung_SB_AM_for_ICS_v03008.so
@@ -97,17 +88,11 @@ lib/libwvdrm_L3.so
 lib/libwvm.so
 lib/libWFC.so
 lib/libWVStreamControlAPI_L3.so
-
-# Modules
 lib/modules/VoiceSolution.ko
-
-# Alsa
 usr/lib/alsa-lib/libasound_module_pcm_bcmfilter.so
 usr/lib/alsa-lib/libbcm_hp_filter.so
 usr/lib/alsa-lib/libbcm_test_filter.so
 usr/share/alsa/alsa.conf
-
-# HW Vendor
 vendor/lib/egl/libGLES_vc4.so
 vendor/lib/hw/camera.capri.so
 vendor/lib/hw/gralloc.capri.so
