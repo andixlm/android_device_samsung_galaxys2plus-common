@@ -71,7 +71,6 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-	Torch \
 	SamsungServiceMode \
 	charger_res_images \
 	com.android.future.usb.accessory
