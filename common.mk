@@ -104,6 +104,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring=0 \
 	ro.telephony.call_ring.multiple=0
 
+# FM Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+	service.brcm.fm.start_snr=41 \
+	service.brcm.fm.stop_snr=20
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
 	brcm.hwc.no-hdmi-trans=1 \
