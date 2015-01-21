@@ -120,10 +120,3 @@ BOARD_SEPOLICY_UNION += \
     system_server.te \
     tvserver.te \
     vclmk.te
-
-# Disable adb RSA security and enable adb root when debug
-ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
-ADDITIONAL_DEFAULT_PROPERTIES := \
-	ro.adb.secure=0 \
-	ro.secure=0
-endif
