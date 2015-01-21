@@ -39,11 +39,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
 
     public SamsungBCMRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
-        this(context, preferredNetworkType, cdmaSubscription);
-    }
-
-    public SamsungBCMRIL(Context context, int networkMode, int cdmaSubscription) {
-        super(context, networkMode, cdmaSubscription);
+        super(context, preferredNetworkType, cdmaSubscription, null);
         mQANElements = 6;
     }
 
