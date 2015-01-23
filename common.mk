@@ -76,6 +76,10 @@ PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory
 
 # Properties
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+	camera2.portability.force_api=1
+
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.brcm.log=none \
@@ -89,7 +93,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.media.use-awesome=true
-
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
