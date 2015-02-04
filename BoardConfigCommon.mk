@@ -121,3 +121,6 @@ BOARD_SEPOLICY_UNION += \
     system_server.te \
     tvserver.te \
     vclmk.te
+
+# Inherit from the proprietary version
+-include vendor/samsung/galaxys2plus-common/BoardConfigVendor.mk
