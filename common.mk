@@ -95,6 +95,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
+# Set read only default composition for USB
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.sys.usb.default.config=mtp
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
 	mobiledata.interfaces=rmnet0 \
