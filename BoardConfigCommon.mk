@@ -53,6 +53,9 @@ BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2plus-common/include
 
+# Camera
+COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
