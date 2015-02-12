@@ -14,12 +14,6 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/ramdisk/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
 	$(COMMON_PATH)/ramdisk/init.log.rc:root/init.log.rc
 
-# File system management tools
-PRODUCT_PACKAGES += \
-	setup_fs \
-	make_ext4fs \
-	e2fsck
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
 	hostapd \
