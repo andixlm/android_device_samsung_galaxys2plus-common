@@ -1,5 +1,3 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 COMMON_PATH := device/samsung/galaxys2plus-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
