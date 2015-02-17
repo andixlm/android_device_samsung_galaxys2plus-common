@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+	# Galaxy S II Plus dependencies
+	<project name="andixlm/android_build-tools_galaxys2plus-common" path="build-tools" remote="github" revision="cm-12.0" />
+	<project name="andixlm/android_device_samsung_galaxys2plus-common" path="device/samsung/galaxys2plus-common" remote="github" revision="cm-12.0" />
+	<project name="andixlm/android_device_samsung_i9105" path="device/samsung/i9105" remote="github" revision="cm-12.0" />
+	<project name="andixlm/android_device_samsung_i9105p" path="device/samsung/i9105p" remote="github" revision="cm-12.0" />
+	<project name="andixlm/android_kernel_samsung_galaxys2plus-common" path="kernel/samsung/galaxys2plus-common" remote="github" revision="lollipop" />
+	<project name="andixlm/proprietary_vendor_samsung_galaxys2plus-common" path="vendor/samsung/galaxys2plus-common" remote="github" revision="master" />
+	
+	# CyanogenMod dependencies
+	<project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" remote="github" revision="cm-12.0" />
+	<project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" revision="cm-12.0" />
+</manifest>
