@@ -26,6 +26,7 @@ etc/srm.bin
 etc/tinyucm.conf
 etc/Volume.db
 etc/wifi/bcmdhd_apsta.bin
+etc/wifi/bcmdhd_p2p.bin
 etc/wifi/bcmdhd_sta.bin
 etc/wifi/nvram_net.txt
 lib/hw/alsa.default.so
