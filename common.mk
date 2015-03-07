@@ -112,6 +112,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
 	brcm.hwc.no-hdmi-trans=1 \
+	debug.hwui.render_dirty_regions=false \
 	ro.opengles.version=131072 \
 	ro.zygote.disable_gl_preload=1
 
