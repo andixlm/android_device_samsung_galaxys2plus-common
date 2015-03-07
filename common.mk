@@ -83,6 +83,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.brcm.gralloc.force_hdcp=1
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.media.use-awesome=true
+
 # Enable USB OTG interface
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.isUsbOtgEnabled=true
