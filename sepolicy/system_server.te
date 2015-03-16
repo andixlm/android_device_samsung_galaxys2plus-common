@@ -6,3 +6,6 @@ allow system_server efs_file:dir search;
 
 # Access /sys/class/lcd/panel/power_reduce
 allow system_server sysfs_writable:file rw_file_perms;
+
+allow system_server recovery_cache_file:dir { relabelfrom create_dir_perms };
+allow system_server recovery_cache_file:file { relabelfrom create_file_perms };

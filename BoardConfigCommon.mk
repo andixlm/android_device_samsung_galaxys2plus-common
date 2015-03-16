@@ -118,13 +118,16 @@ BOARD_SEPOLICY_UNION += \
     geomagneticd.te \
     gpsd.te \
     init.te \
+    install_recovery.te \
     kernel.te \
     macloader.te \
     rild.te \
     shell.te \
     system_server.te \
     tvserver.te \
-    vclmk.te
+    untrusted_app.te \
+    vclmk.te \
+    vold.te
 
 # Inherit from the proprietary version
 -include vendor/samsung/galaxys2plus-common/BoardConfigVendor.mk

@@ -1,5 +1,5 @@
-# chmod in init.capri_ss_s2ve*.rc (for bkmgrd)
-allow init block_device:blk_file setattr;
+# chmod in init.capri*.rc (for bkmgrd)
+allow init mmc_block_device:blk_file setattr;
 allow init radio_device:blk_file setattr;
 
 # insmod
