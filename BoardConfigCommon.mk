@@ -17,6 +17,7 @@ TARGET_CPU_SMP := true
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
+BOARD_EGL_CFG := device/samsung/galaxys2plus-common/configs/egl.cfg
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 BOARD_USE_MHEAP_SCREENSHOT := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
