@@ -10,5 +10,6 @@
 	<project name="andixlm/proprietary_vendor_samsung_galaxys2plus-common" path="vendor/samsung/galaxys2plus-common" remote="github" revision="master" />
 	
 	# CyanogenMod dependencies
+	<project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" remote="github" revision="cm-12.1" />
 	<project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" revision="cm-12.1" />
 </manifest>

@@ -49,7 +49,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # Hardware
-BOARD_HARDWARE_CLASS := device/samsung/galaxys2plus-common/cmhw/
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/galaxys2plus-common/cmhw/
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
