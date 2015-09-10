@@ -17,4 +17,8 @@
 <resources>
     <!-- Whether to show a preference item for mobile plan -->
     <bool name="config_show_mobile_plan">false</bool>
+
+    <!-- This is used to determine whether to hide the
+         preferred application install location settings-->
+    <bool name="config_hide_app_install_location" translatable="false">false</bool>
 </resources>
