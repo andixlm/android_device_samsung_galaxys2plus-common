@@ -127,6 +127,7 @@ BOARD_SEPOLICY_UNION += \
     macloader.te \
     netd.te \
     radio.te \
+    recovery.te \
     rild.te \
     shell.te \
     system_server.te \
