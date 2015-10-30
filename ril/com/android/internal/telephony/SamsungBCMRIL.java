@@ -31,15 +31,19 @@ import android.telephony.PhoneNumberUtils;
 import java.util.ArrayList;
 
 /**
- * Custom RIL to handle unique behavior of BCM radio
+ * Custom RIL to handle unique behavior of BCM RIL
  *
  * {@hide}
  */
 public class SamsungBCMRIL extends RIL implements CommandsInterface {
 
-    public SamsungBCMRIL(Context context, int preferredNetworkType,
+    public SamsungBCMRIL(Context context, int networkMode, int cdmaSubscription) {
+        this(context, networkMode, cdmaSubscription, null);
+    }
+
+    public SamsungBCMRIL(Context context, int networkMode,
             int cdmaSubscription, Integer instanceId) {
-        super(context, preferredNetworkType, cdmaSubscription, null);
+        super(context, networkMode, cdmaSubscription, instanceId);
         mQANElements = 6;
     }
 
