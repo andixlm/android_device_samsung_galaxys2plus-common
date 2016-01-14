@@ -31,11 +31,7 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/gps.conf:system/etc/gps.conf \
 	$(COMMON_PATH)/configs/glconfig.xml:system/etc/gps/glconfig.xml
 
-# Open-source lights HAL
-PRODUCT_PACKAGES += \
-	lights.capri
-
-# Open-source audio HALs
+# Audio
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
